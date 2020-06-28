@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/open-iconic/1.1.1/font/css/open-iconic-bootstrap.min.css"/>
     <link rel="stylesheet" href="./assets/style/style.css">
     <title>Weather Dashboard</title>
 </head>
@@ -11,8 +12,9 @@
 <body>
     <nav class="navbar bg-dark text-white justify-content-center h1">Weather Dashboard</nav>
 
-    <div class="container flex-column flex-lg-row">
-        <div id="city search" class="col-lg-3">
+    <div class="container">
+        <div class="row">
+        <div id="city-search" class="col-md-4 col-s-12">
             <form>
                 <input id="search-city" type="search">
                 <button id="search-btn" class="btn" type="submit">Search</button>
@@ -21,9 +23,10 @@
                 </div>
             </form>
         </div>
+        </div>
     </div>
 
-    <div id="weather-info" class="col-lg-9 p-1">
+    <div id="weather-info" class="col-md-8 col-s-12 display-flex">
         <div id="current-weather" class="current-weather">
             <h2 id="city-name"></h2>
             <p id="city-temp"></p>
@@ -33,10 +36,10 @@
         </div>
     </div>
 
-    <div id="five-day" class="hide">
+    <div id="five-day" class=" row hide">
         <h2>5 Day Forecast</h2>
     </div>
-    <div id="day-cards" class="row-hide">
+    <div id="day-cards" class="row hide">
         <div class="card">
             <div id="day1" class="card-header"></div>
             <div class="card-body">
@@ -79,5 +82,9 @@
         </div>
     </div>
     
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui-touch-punch/0.2.3/jquery.ui.touch-punch.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
+    <script src="./Assets/JS/script.js"></script>
+
 </body>
 </html>
