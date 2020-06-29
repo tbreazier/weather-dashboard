@@ -15,30 +15,33 @@ var cityHistory = [];
 var apiKey = "36e4a7f59c83e4a1f4357162c1a5f93b";
 var iconEl = document.querySelector("img");
 var currentCityEl = document.querySelector("city-name");
+var cityFormEl = document.querySelector("city-search");
 var date = moment().format("MM/DD/YYYY");
 
-var formSubmitHandler = function(event) {
-    event.prevent.default();
-    var cityInput = currentCityEl.nodeValue.trim();
-};
+currentCityEl.textContent(city);
 
 //Current Weather Function
-var getCurrentWeather = function(userCity) {
-    var apiUrl = "api.openweathermap.org/data/2.5/weather?q=" + cityInput + "&appid=" + apiKey;
-    
-    fetch(apiUrl).then(function(response) {
-        if (response.ok) {
-            response.json().then(function(data) {
-                displayWeather(data.items, language);
-            });
-        } else {
-            alert("Error: " + response.statusText);
-        }
+function currentWeather(userInput) {
+    var apiURL = "https://api.openweathermap.org/data/2.5/weather?q=" + userInput + "&appid=" + apiKey;
+
+    currentCityEl.textContent(userInput + " " + date + " ");
+
+    fetch(apiURL)
+    .then(function(response) {
+        console.log(response);
     });
 };
 
+
+
 //Five Day Forecast Function
+
+//Display Weather
+
+//Save Searches
+
+//Load History
 
 //Click Handler
 
-//Load History
+
