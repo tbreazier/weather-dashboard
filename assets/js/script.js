@@ -18,7 +18,8 @@ var currentCity = $("#city-name");
 var cityTempEl = document.getElementById("city-temp");
 var cityHumidityEl = document.getElementById("city-humidity");
 var cityWindEl = document.getElementById("city-wind");
-var cityUvIndexEl = document.getElementById("city-uv-index");
+var cityUvIndexEl = document.getElementById("city-uv");
+var tempEl = document.getElementById("temp");
 var currentDate = moment().format("MM/DD/YYYY");
 
 currentCity.text(city);
