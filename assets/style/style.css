@@ -1,5 +1,28 @@
+.card-header {
+    color: white;
+    margin-right: 10px;
+}
 
+.card-body {
+    color: white;
+    margin-right: 10px;
+}
+
+.card {
+    margin-right: 15px;
+    background-color: blue;
+}
 
 .hide {
     display: none;
+}
+
+.current-weather {
+    border: 2px solid;
+    padding: 10px;
+}
+
+#city-name {
+    font-size: 30px;
+    color: red;
 }

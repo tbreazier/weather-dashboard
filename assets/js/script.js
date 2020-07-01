@@ -19,7 +19,6 @@ var cityTempEl = document.getElementById("city-temp");
 var cityHumidityEl = document.getElementById("city-humidity");
 var cityWindEl = document.getElementById("city-wind");
 var cityUvIndexEl = document.getElementById("city-uv");
-var tempEl = document.getElementById("temp");
 var currentDate = moment().format("MM/DD/YYYY");
 
 currentCity.text(city);
@@ -58,6 +57,7 @@ function getWeather(userCity) {
            cityUvIndexEl.innerHTML = "UV Index: " + data.value;
         });
     });
+    $(".current-weather").removeClass("hide");
     }).catch(function (error){
         alert("Error: " + response.statusText);
     });
@@ -147,7 +147,5 @@ $("#search-btn").on("click", function (event) {
 
         getWeather(city);
     }
-
     $("#search-city").val("");
-
 });

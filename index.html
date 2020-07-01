@@ -16,10 +16,11 @@
     <!--Search Button-->
     <main class="container">
         <div class="row">
-            <div class="col-lg-3">
+            <div class="col-3 form-inline">
                 <form id="city-search">
+                    <h4>Search for a City</h3>
                     <input id="search-city" class="form-control" type="search">
-                    <button id="search-btn" class="btn btn-primary" type="submit">Search</button>
+                    <button id="search-btn" class="btn btn-primary" type="submit"><span class="oi oi-magnifying-glass"></span></button>
                     <!--History List-->
                     <div class="history">
                         <ul class="list-group">
@@ -30,7 +31,7 @@
         
             <!--Current Weather for searched city-->
             <div class="col-lg-9" id="weather-info">
-                <div id="city-weather" class="current-weather">
+                <div id="city-weather" class="current-weather hide">
                     <h2 id="city-name"></h2>
                     <p id="city-temp"></p>
                     <p id="city-humidity"></p>
